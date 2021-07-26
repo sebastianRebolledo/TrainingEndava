@@ -6,7 +6,7 @@ public class Drink extends Product implements CalculatePriceProduct  {
 	public final static int WATER=2;
 	public final static int SODA = 3;
 	
-	public final static double IMPUESTO = 0.04;
+	public final static double DUTY = 0.04;
 	
 	private int typeDrink;
 	public Drink(String nameProduct, double price,int typeDrink) {
@@ -32,7 +32,7 @@ public class Drink extends Product implements CalculatePriceProduct  {
 		double price=0;
 
 		if(typeDrink==1) {
-			price= (this.getPrice()*IMPUESTO);
+			price= (this.getPrice()*DUTY);
 		}else{
 			price=  this.getPrice();
 		}

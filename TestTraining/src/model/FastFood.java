@@ -7,7 +7,7 @@ public class FastFood extends Product implements CalculatePriceProduct{
 	public static final int  HAMBURGUER=1;
 	public static final int HOT_DOG=2;
 	
-	public static final double DESCUENTO = 3;
+	public static final double DISCOUNT = 3;
 
 	private int typeFastFood;
 	public FastFood(String nameProduct, double  price,int typeFastFood) {
@@ -27,7 +27,7 @@ public class FastFood extends Product implements CalculatePriceProduct{
 	public double calculatePrice() {
 		double price=0;
 		if(this.typeFastFood ==1) {
-		price=this.getPrice() - DESCUENTO;
+		price=(this.getPrice() - DISCOUNT);
 		}else {
 		price= this.getPrice();
 		}
